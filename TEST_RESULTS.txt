@@ -1,0 +1,12 @@
+Syntax validation: passed for app.py and modules.
+Dataset validation: loaded 24 rows.
+Question-handler tests:
+- PASS: Which 5 products generated the highest revenue? -> 5 result row(s); SQL begins: SELECT PRODUCT, SUM(REVENUE) AS TOTAL_REVENUE FROM SALES GROUP BY
+- PASS: Show monthly revenue trends -> 9 result row(s); SQL begins: SELECT EXTRACT(YEAR FROM ORDER_DATE) AS ORDER_YEAR, EXTRACT(MONTH
+- PASS: Which region has the highest revenue? -> 1 result row(s); SQL begins: SELECT REGION, SUM(REVENUE) AS TOTAL_REVENUE FROM SALES GROUP BY 
+- PASS: Show revenue by category -> 2 result row(s); SQL begins: SELECT CATEGORY, SUM(REVENUE) AS TOTAL_REVENUE FROM SALES GROUP B
+- PASS: Which customer segment generated the most revenue? -> 5 result row(s); SQL begins: SELECT CUSTOMER_ID, SUM(REVENUE) AS TOTAL_REVENUE FROM SALES GROU
+- PASS: How many orders are there? -> 1 result row(s); SQL begins: SELECT COUNT(DISTINCT ORDER_ID) AS ORDER_COUNT FROM SALES;
+- PASS: Show the top 5 customers by revenue -> 5 result row(s); SQL begins: SELECT CUSTOMER_ID, SUM(REVENUE) AS TOTAL_REVENUE FROM SALES GROU
+- PASS: What is the average order revenue? -> 1 result row(s); SQL begins: SELECT AVG(ORDER_REVENUE) FROM (SELECT ORDER_ID, SUM(REVENUE) AS 
+- PASS: What is the total revenue? -> 1 result row(s); SQL begins: SELECT SUM(REVENUE) AS TOTAL_REVENUE FROM SALES;
